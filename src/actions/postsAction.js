@@ -7,7 +7,7 @@ export const setPosts = (posts) => {
 // async 
 export const startGetPosts = () => {
     return (dispatch) => {
-        axios.get('')
+        axios.get('http://jsonplaceholder.typicode.com/posts')
             .then(response => {
                 // console.log(response.data)
                 const posts = response.data 

@@ -1,11 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 
-export default function PostList(props){
-
+function PostList(props){
+    const posts = props.posts;
     return (
         <div>
-            PostList
+            {posts ? posts : 'loading posts'}
         </div>
     );
 }
+
+function mapStateToProps(state){
+    return {
+        posts: state.posts
+    }
+}
+export default connect(mapStateToProps)(PostList)
