@@ -17,7 +17,7 @@ export default function App(props) {
 
                 {/* <Route path="/" component={App} exact={true} /> */}
                 <Route path="/users" component={UserList} exact={true} />
-                <Route path="/users/:id" component={UserShow} />
+                <Route path="/user/:id" component={UserShow} />
                 <Route path="/posts" component={PostList} />
                 <Route path="/post/:id" component={PostShow} />
             </div>

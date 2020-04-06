@@ -6,12 +6,14 @@ import configureStore from './store/configureStore';
 import { startGetUsers } from './actions/usersAction';
 import  { startGetPosts } from './actions/postsAction';
 
+
+
 const store = configureStore();
 store.dispatch(startGetUsers());
 store.dispatch(startGetPosts());
 
 const el = (
-    <Provider store={configureStore()}>
+    <Provider store={store}>
         <App />
     </Provider>
 );
